@@ -1,10 +1,14 @@
 # eBPF_drop: A program to drop TCP packets from a network device on a specified port
 
-The tool uses libbpf and golang on userspace.
-The tool can take user configurable port and network device.
+The tool uses libbpf and golang on userspace.</br>
+
+The tool can take user configurable port and network device.</br>
 
 ## Usage
 ```bash
+    # Install dependencies for void linux
+    sudo xbps-install libbpf-devel clang linux-headers llvm make elfutils-devel bpftool bpftrace netcat go 
+
     # from the root of project execute the following 
     # To build the ebpf kernel program and userspace program
     make build
