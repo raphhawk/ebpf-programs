@@ -1,14 +1,20 @@
 # eBPF_drop: A program to drop TCP packets from a network device on a specified port
 
-This tool uses libbpf and golang on userspace.
+The tool uses libbpf and golang on userspace.
+The tool can take user configurable port and network device.
 
-```make
-    // To build the ebpf kernel program and userspace program
+## Usage
+```bash
+    # from the root of project execute the following 
+    # To build the ebpf kernel program and userspace program
     make build
     
-    // To run the program with default port i,e (4000) and default network i,e (loopback)
+    # To run the program with default port i,e (4000) and default network i,e (loopback)
     make run
+    
+    # To run with user specified port/nw device/both 
+    sudo ./builds/epbf_drop -port=8080 -nw=lo
 
-    // To clean all generated elf/go binaries
+    # To clean all generated elf/go binaries
     make clean
 ```
