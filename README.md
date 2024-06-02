@@ -1,11 +1,11 @@
-# Accuknox assesment solutions
+# AccuKnox Assesment Solutions
 
-## Problem statement 1: Drop packets using eBPF
+## Problem 1: Drop packets using eBPF
 
 ### Write an eBPF code to drop the TCP packets on a port (def: 4040). Additionally, if you can make the port number configurable from the userspace, that will be a big plus.
 The code and explanation is implemented inside `ebpf_drop` directory. Feel free to check it out.
 
-## Explain what the following code is attempting to do?
+## Problem 2: Explain what the following code is attempting to do?
 ```go
 package main
 
