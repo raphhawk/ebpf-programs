@@ -19,7 +19,7 @@
     # To build the ebpf kernel program and userspace program
     make build
     
-    # To run the program with default port i,e (4000) and default network i,e (loopback)
+    # To run the program with default port i,e (4040) and default network i,e (loopback)
     make run
     
     # To run with user specified port/nw device/both 

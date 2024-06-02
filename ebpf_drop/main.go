@@ -20,7 +20,7 @@ const (
 
 func main() {
 	// Set flags
-	port := flag.Int("port", 4000, "get user specific port")
+	port := flag.Int("port", 4040, "get user specific port")
 	nw := flag.String("nw", "lo", "get netword device")
 	flag.Parse()
 
@@ -61,8 +61,9 @@ func main() {
 	defer link.Close()
 	log.Printf("%v All TCP packets to the port %v from network %v will be dropped\n", i, *port, *nw)
 
+	// listen for SIGINT
 	stop := make(chan os.Signal, 5)
-	signal.Notify(stop, os.Interrupt) // listen for SIGINT
+	signal.Notify(stop, os.Interrupt)
 	select {
 	case <-stop:
 		log.Println(i, " Received Interrupt signal, exiting...")
