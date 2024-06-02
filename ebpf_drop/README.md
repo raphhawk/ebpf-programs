@@ -1,10 +1,10 @@
 # 🐝 eBPF_drop: A program to drop TCP packets from a network device on a specified port
 
 ## Desc
-The tool uses libbpf and golang on userspace.</br>
-The tool can take user configurable port and network device.</br>
-The kernel program can be found in `tcp_drop_kernel.c`.</br>
-The userspace code program can be found in `main.go`.</br>
+-[x] The tool uses [libbpf](https://github.com/libbpf/libbpf), [ebpf-go](https://ebpf-go.dev/) and [golang](https://go.dev/) on userspace.</br>
+-[x] The tool can take user configurable port and network device.</br>
+-[x] The kernel program can be found in `tcp_drop_kernel.c`.</br>
+-[x] The userspace code program can be found in `main.go`.</br>
 
 ## Usage
 ```bash
